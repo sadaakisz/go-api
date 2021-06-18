@@ -23,7 +23,7 @@ func Nearest(n Node, nList []Node) int {
 	ch := make(chan int)
 	for i, node := range nList {
 		go func(i int, node, cl Node) {
-			res[i] = distance(n, node)
+			res[i] = eucDistance(n, node)
 			ch <- 1
 		}(i, node, n)
 	}
@@ -39,7 +39,7 @@ func Nearest(n Node, nList []Node) int {
 	return minI
 }
 
-func distance(n1, n2 Node) float32 {
+func eucDistance(n1, n2 Node) float32 {
 	ln1 := len(n1)
 	square := make(Node, ln1, ln1)
 	cont := make(chan int)
