@@ -43,7 +43,6 @@ export default {
       ],
       dataset: '',
       clusters: 4,
-      loading: false,
     }
   },
   mounted () {
