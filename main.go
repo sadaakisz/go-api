@@ -84,7 +84,7 @@ func HomeHandler(w http.ResponseWriter, r *http.Request) {
 }
 
 func main() {
-
+	fmt.Println("Running")
 	r := mux.NewRouter()
 	c := cors.New(cors.Options{
 		AllowedOrigins:   []string{"*"},
